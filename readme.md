@@ -13,6 +13,6 @@ Edit the config file, to personalize the module.
 	    echo '<a href="'.$fbconnect->login_url().'">Log in.</a>';
 	}
 	else {
-	    //$fbauth->graph('/100003957967640/feed', 'POST', array('link' => 'www.example.com', 'message' => 'Posting with the PHP SDK!' )); // posts to users wall
+	    //$fbauth->graph('/FRIEND_ID/feed', 'POST', array('link' => 'www.example.com', 'message' => 'Posting with the PHP SDK!' )); // posts to users wall
 	    print_r($fbconnect->graph('/me'));
 	}
