@@ -13,6 +13,9 @@ Edit the config file, to personalize the module.
 	    echo '<a href="'.$fbconnect->login_url().'">Log in.</a>';
 	}
 	else {
-	    //$fbauth->graph('/FRIEND_ID/feed', 'POST', array('link' => 'www.example.com', 'message' => 'Posting with the PHP SDK!' )); // posts to users wall
-	    print_r($fbconnect->graph('/me'));
+	    // Post to a user's friend's wall
+	    $fbauth->graph('/FRIEND_ID_HERE/feed', 'POST', array('link' => 'www.example.com', 'message' => 'Posting with the PHP SDK!' )); // posts to users wall
+	    
+	    // Get the list of friends of the logged user
+	    print_r($fbconnect->graph('/me/friends'));
 	}
